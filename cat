@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NASA Astronomy Picture of the Day</title>
+<title>Cat Picture of the Day</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -27,41 +27,67 @@
 </style>
 </head>
 <body>
-
-<div class="container">
-  <h1>NASA Astronomy Picture of the Day</h1>
-  <div id="apod-content">
-    <p>Loading...</p>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetchAPOD();
-  });
-
-  function fetchAPOD() {
-    var apiKey = "YOUR_API_KEY_HERE";
-    var apiUrl = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
-
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        var apodContent = document.getElementById("apod-content");
-        apodContent.innerHTML = `
-          <h2>${data.title}</h2>
-          <p><strong>Date:</strong> ${data.date}</p>
-          <p>${data.explanation}</p>
-          <img src="${data.url}" alt="${data.title}">
-        `;
-      })
-      .catch(error => {
-        console.error("Error fetching APOD:", error);
-        var apodContent = document.getElementById("apod-content");
-        apodContent.innerHTML = "<p>Error fetching APOD. Please try again later.</p>";
-      });
-  }
-</script>
-
+[
+    {
+        "id": "g7",
+        "url": "https://cdn2.thecatapi.com/images/g7.jpg",
+        "width": 534,
+        "height": 800
+    },
+    {
+        "id": "2og",
+        "url": "https://cdn2.thecatapi.com/images/2og.jpg",
+        "width": 500,
+        "height": 331
+    },
+    {
+        "id": "31o",
+        "url": "https://cdn2.thecatapi.com/images/31o.jpg",
+        "width": 500,
+        "height": 359
+    },
+    {
+        "id": "39m",
+        "url": "https://cdn2.thecatapi.com/images/39m.jpg",
+        "width": 600,
+        "height": 904
+    },
+    {
+        "id": "4un",
+        "url": "https://cdn2.thecatapi.com/images/4un.jpg",
+        "width": 720,
+        "height": 540
+    },
+    {
+        "id": "60m",
+        "url": "https://cdn2.thecatapi.com/images/60m.jpg",
+        "width": 1125,
+        "height": 1500
+    },
+    {
+        "id": "acb",
+        "url": "https://cdn2.thecatapi.com/images/acb.jpg",
+        "width": 500,
+        "height": 375
+    },
+    {
+        "id": "dup",
+        "url": "https://cdn2.thecatapi.com/images/dup.jpg",
+        "width": 742,
+        "height": 538
+    },
+    {
+        "id": "MTUzOTI1MA",
+        "url": "https://cdn2.thecatapi.com/images/MTUzOTI1MA.jpg",
+        "width": 600,
+        "height": 600
+    },
+    {
+        "id": "MTc3NjExMw",
+        "url": "https://cdn2.thecatapi.com/images/MTc3NjExMw.jpg",
+        "width": 484,
+        "height": 332
+    }
+]
 </body>
 </html>
